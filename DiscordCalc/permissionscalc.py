@@ -2,7 +2,7 @@
 """
 The MIT License (MIT)
 
-Copyright (c) 2015-2016 AraHaan
+Copyright (c) 2015-2021 AraHaan
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the "Software"),
@@ -44,10 +44,13 @@ class General:
         self.Ban_Members = eval(0x4)
         self.Change_Nickname = eval(0x4000000)
         self.Manage_Emojis = eval(0x40000000)
+        self.View_Audit_Log = eval(0x80)
+        self.View_Server_Insights = eval(0x80000)
         # This below Adds all of these permissions together for you.
         self.all = (self.Administrator + self.Manage_Roles + self.Kick_Members + self.Create_Instant_Invite + 
                     self.Manage_Nicknames + self.Manage_Webhooks + self.Manage_Server + self.Manage_Channels +
-                    self.Ban_Members + self.Change_Nickname + self.Manage_Emojis)
+                    self.Ban_Members + self.Change_Nickname + self.Manage_Emojis + self.View_Audit_Log +
+                    self.View_Server_Insights)
 
 
 class Text:
@@ -82,6 +85,9 @@ class Voice:
         self.Speak = eval(0x200000)
         self.Deafen_Members = eval(0x800000)
         self.Use_Voice_Activity = eval(0x2000000)
+        self.Video = eval(0x200)
+        self.Priority_Speaker = eval(0x100)
+        self.View_Channel = eval(0x400)
         # This below Adds all of these permissions together for you.
         self.all = (self.Connect + self.Mute_Members + self.Move_Members + self.Speak + self.Deafen_Members +
-                    self.Use_Voice_Activity)
+                    self.Use_Voice_Activity + self.Video + self.Priority_Speaker + self.View_Channel)
